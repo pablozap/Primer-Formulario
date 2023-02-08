@@ -1,0 +1,53 @@
+body{
+    background-color: #12c0d0;
+    font: normal 18px/1.5;
+    color: white;
+}
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.flex-outer, .flex-inner{
+    align-items: baseline;
+    list-style-type: none;
+    padding: 0;
+}
+.flex-outer{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.flex-outer li, .flex-inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.flex-inner{
+    padding: 0 8px;
+    justify-content: space-between;
+}
+.flex-outer > li:not(:last-child){
+    margin-bottom: 20px;
+}
+.flex-outer li label, .flex-outer li p{
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+.flex-outer > li > label, .flex-outer li p{
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+.flex-outer > li > label + *, .flex-inner {
+    flex: 1 0 220px;
+}
+.container button{
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+}
